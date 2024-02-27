@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FriendsFlame" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/primaryColor</item>
+        <item name="android:navigationBarColor">#000000</item>
+    </style>
+    
+    <style name="Theme.RemoveSplashScreenTheme" parent="@style/Base.Theme.FriendsFlame">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    
+    <style name="CustomAlertDialog" parent="Base.Theme.FriendsFlame">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@drawable/rounded_corner</item>
+    </style>
+
+    <style name="Theme.FriendsFlame" parent="Base.Theme.FriendsFlame" />
+    
+</resources>

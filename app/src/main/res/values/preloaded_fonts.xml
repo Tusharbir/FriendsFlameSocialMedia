@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/belgrano</item>
+        <item>@font/dm_serif_display</item>
+        <item>@font/libre_baskerville</item>
+        <item>@font/libre_baskerville_bold</item>
+        <item>@font/pt_serif_caption</item>
+    </array>
+</resources>

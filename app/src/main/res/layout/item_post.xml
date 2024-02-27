@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:layout_marginStart="7dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_blank_picture"
+                android:id="@+id/iv_Profile"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+
+            <TextView
+                android:id="@+id/tv_postUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Tusharbir.singh"
+                android:textSize="14dp"
+                android:layout_marginStart="03dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dm_serif_display"
+                android:textStyle="bold"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_postDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "Tusharbir.singh"
+                android:textSize="10dp"
+                android:gravity="end"
+                android:textColor="@color/black"
+                android:fontFamily="@font/libre_baskerville_bold"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:src="@drawable/ic_logo"
+            android:id="@+id/iv_postImage"
+            android:layout_marginTop="08dp"
+            android:scaleType="centerCrop"
+
+            />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="04dp"
+        android:background="#EDE9E9"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:tint="@color/primaryColor"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_heart"
+            android:id="@+id/iv_post_like_button"
+            android:contentDescription="like button" />
+
+        <ImageView
+            app:tint="@color/primaryColor"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_comment"
+            android:id="@+id/iv_comment_button"
+            android:contentDescription="comment post button" />
+
+
+        <ImageView
+            app:tint="@color/primaryColor"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_save_post"
+            android:id="@+id/iv_save_post_button"
+            android:contentDescription="save post button" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="04dp"
+        android:clickable="true"
+        android:background="@drawable/ripple_effect"
+        android:backgroundTint="@color/white"
+        android:paddingHorizontal="6dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/totalLikesLayout"
+        android:visibility="visible"
+        android:layout_marginStart="6dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_totalLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="02dp"
+            android:fontFamily="@font/belgrano"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:text="0 Likes" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="04dp"
+        android:layout_marginBottom="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_captionUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="09dp"
+            android:layout_marginTop="02dp"
+            android:fontFamily="@font/belgrano"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="Caption" />
+
+        <TextView
+            android:id="@+id/tv_postCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="03dp"
+            android:layout_marginTop="02dp"
+            android:fontFamily="monospace"
+            android:textSize="14sp"
+            android:text="Caption" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_marginTop="06dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C4525151"/>
+
+    </LinearLayout>
+

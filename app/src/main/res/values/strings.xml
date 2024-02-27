@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Friends Flame</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="web_client_id"></string>
+
+
+    <string name="facebook_app_id"></string>
+    <string name="fb_login_protocol_scheme"></string>
+    <string name="facebook_client_token"></string>
+
+
+</resources>

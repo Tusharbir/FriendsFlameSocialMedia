@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.HomeFragment">
+
+
+
+        <TextView
+            android:id="@+id/tv_no_posts"
+            android:layout_width="match_parent"
+            android:paddingVertical="250dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:text="No Posts Yet!, \nEither make a post or add some friends to see there's! \nWohoooo"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            android:fontFamily="@font/pt_serif_caption"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="02dp"
+            android:layout_marginEnd="02dp"
+            android:overScrollMode="never"
+            android:id="@+id/recyclerView"/>
+
+
+
+</LinearLayout>

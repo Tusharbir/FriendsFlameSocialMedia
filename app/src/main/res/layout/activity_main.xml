@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <include
+        layout="@layout/toolbar_layout"/>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintTop_toBottomOf="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_logo"
+                    android:layout_margin="20dp">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIGN UP YOURSELF"
+                    android:fontFamily="@font/dm_serif_display"
+                    android:textColor="@color/black"
+                    android:textSize="28dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_google"
+                        android:id="@+id/googlesign"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/ripple_effect"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_facebook"
+                        android:id="@+id/fbLoginButton"
+                        android:background="@drawable/ripple_effect"/>
+
+<!--                    <com.facebook.login.widget.LoginButton-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:id="@+id/fbLoginButton"-->
+<!--                        android:scaleType="fitCenter"-->
+<!--                        android:background="@drawable/ripple_effect"/>-->
+
+
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etUsernameTextInput"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                    android:layout_width="327dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    app:startIconDrawable="@drawable/ic_user">
+
+                    <EditText
+                        android:singleLine="true"
+                        android:id="@+id/eTUsername"
+                        android:layout_width="327dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="16dp">
+                    </EditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                    android:layout_width="327dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    app:passwordToggleEnabled="true"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:singleLine="true"
+                        android:id="@+id/eTPassword"
+                        android:layout_width="327dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textColor="@color/black"
+                        android:inputType="textPassword">
+                    </EditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="327dp"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                    android:hint="Name"
+                    app:startIconDrawable="@drawable/ic_name"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="327dp"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textColor="@color/black"
+                        android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailTextInput"
+                    android:layout_width="327dp"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                    android:hint="Email"
+                    app:startIconDrawable="@drawable/ic_email"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="327dp"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        android:textColor="@color/black"
+                        android:inputType="textEmailAddress"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="327dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="signUpClick"
+                    android:clickable="true"
+                    android:text="Sign up"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp">
+
+                </androidx.appcompat.widget.AppCompatButton>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already Resgitered!"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/libre_baskerville_bold"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_pointer"
+                        android:layout_marginEnd="04dp"
+                        android:layout_marginTop="3dp"/>
+
+                    <TextView
+                        android:id="@+id/loginClick"
+                        android:clickable="true"
+                        android:background="@drawable/ripple_effect"
+                        android:backgroundTint="@color/white"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login Here!"
+                        android:fontFamily="@font/pt_serif_caption"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

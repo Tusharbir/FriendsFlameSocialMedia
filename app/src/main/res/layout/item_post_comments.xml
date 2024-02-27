@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="top"
+        android:weightSum="4"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_weight="0.1"
+            android:id="@+id/iv_comment_profile_url"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_blank_picture"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2.8"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_comment_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bob Smith"
+                android:textSize="14sp"
+                android:fontFamily="@font/dm_serif_display"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="nice pic"
+                android:textSize="12sp"
+                android:fontFamily="@font/pt_serif_caption"
+                android:textColor="@color/black"
+                android:id="@+id/tv_comment_user_comment"/>
+
+            <EditText
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="true"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:id="@+id/commentEditText"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/editButton"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top"
+            android:src="@drawable/ic_pencil"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/editComment"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="24dp"
+            android:layout_gravity="top"
+            android:src="@drawable/ic_tick"/>
+
+        <ImageView
+            android:id="@+id/deleteButton"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top|end"
+            android:src="@drawable/ic_delete"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corner"
+    android:backgroundTint="@color/white"
+    tools:context=".fragments.CommentsBottomSheetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            />
+
+        <TextView
+            android:id="@+id/tv_no_comments"
+            android:layout_width="250dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:text="No Comments Yet!, Be The First One To Comment !"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            android:fontFamily="@font/pt_serif_caption"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_post_comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="90dp"
+            android:overScrollMode="never"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0"/>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/comment_section_profile_url"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.5"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_blank_picture"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_add_comment_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginStart="4dp"
+                android:layout_weight="2"
+                android:gravity="top"
+                android:hint="Add a Comment"
+                app:counterEnabled="true"
+                app:counterMaxLength="300"
+                app:counterOverflowTextColor="@android:color/holo_red_dark">
+
+                <EditText
+                    android:id="@+id/et_add_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxHeight="150dp"
+                    android:textColor="@color/black"
+                    android:maxLength="301"
+                    android:textSize="11sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/iv_post_comment"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.5"
+                android:padding="2dp"
+                android:src="@drawable/ic_send"
+                app:tint="@color/primaryColor" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

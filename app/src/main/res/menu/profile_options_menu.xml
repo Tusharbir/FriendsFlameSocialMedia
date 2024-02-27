@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/options_profileSavedPosts"
+        android:title="View Saved Posts" />
+
+    <item
+        android:id="@+id/options_ProfileChangePassword"
+        android:title="Change Password" />
+
+    <item
+        android:id="@+id/options_profileLogout"
+        android:title="Logout" />
+
+</menu>

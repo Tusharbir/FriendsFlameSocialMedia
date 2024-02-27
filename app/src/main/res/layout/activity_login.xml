@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/dm_serif_display"
+                android:text="SIGN IN"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_google"
+                    android:id="@+id/googleSignIN"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ripple_effect"/>
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_facebook"
+                    android:id="@+id/fbLoginButton"
+                    android:background="@drawable/ripple_effect"/>
+
+
+            </LinearLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="Username/Email-Id"
+                app:startIconDrawable="@drawable/ic_user">
+
+                <EditText
+                    android:singleLine="true"
+                    android:id="@+id/etUsername"
+                    android:layout_width="327dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="Password"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_lock">
+
+                <EditText
+                    android:singleLine="true"
+                    android:id="@+id/password"
+                    android:layout_width="327dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="08dp"
+                    android:fontFamily="@font/libre_baskerville_bold"
+                    android:text="Forgot Password?"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="04dp"
+                    android:gravity="end">
+
+
+                    <TextView
+                        android:id="@+id/resetPassword"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_effect"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/pt_serif_caption"
+                        android:paddingStart="06dp"
+                        android:paddingEnd="06dp"
+                        android:text="Reset Password!"
+                        android:textColor="@color/primaryColor" />
+
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="02dp"
+                        android:layout_marginEnd="08dp"
+                        android:src="@drawable/ic_reset_password" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginClickButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect"
+                android:text="Log in"
+                android:textColor="@color/white"
+                android:onClick="loginFunctionality"
+                android:textSize="16dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registerClickButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect"
+                android:text="New User? Register Here !"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

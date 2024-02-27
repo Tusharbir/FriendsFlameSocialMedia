@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.FriendsProfileFragment">
+
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_counter_friendsProfileUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="08dp"
+        android:textColor="@color/black"
+
+        android:fontFamily="@font/libre_baskerville_bold"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_blank_picture"
+                android:id="@+id/iv_friendsProfileImage"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+            <TextView
+                android:layout_marginTop="04dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:fontFamily="@font/libre_baskerville"
+                android:id="@+id/tv_counter_friendsProfileName"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Posts"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dm_serif_display"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_counter_friendsProfilePostsId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="04dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/libre_baskerville" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_friends_friendscounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friends"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dm_serif_display"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_counter_friendsProfileFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="04dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/libre_baskerville" />
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:overScrollMode="never"
+        android:layout_marginTop="04dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/friendsPostsRecycler"/>
+
+
+</LinearLayout>
+
+</ScrollView>
